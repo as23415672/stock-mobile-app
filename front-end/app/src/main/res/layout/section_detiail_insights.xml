@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_details">
+
+    <TextView
+        android:id="@+id/detailInsightsTitle"
+        style="@style/detailSectionTitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_insights_title" />
+
+    <TextView
+        android:id="@+id/detailInsightsTabelTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/detail_insights_table_title"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="100dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="1dp">
+
+                <TextView
+                    android:id="@+id/detailInsightsTableName"
+                    style="@style/detailInsightsTableHeaderStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder" />
+
+                <TextView
+                    android:id="@+id/detailInsightsTableMSRP"
+                    style="@style/detailInsightsTableHeaderStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/detail_insights_mspr" />
+
+                <TextView
+                    android:id="@+id/detailInsightsChange"
+                    style="@style/detailInsightsTableHeaderStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/detail_insights_change" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="1dp">
+
+                <TextView
+                    android:id="@+id/detailInsightsTableTotal"
+                    style="@style/detailInsightsTableHeaderStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/detail_insights_total" />
+
+                <TextView
+                    android:id="@+id/detailInsightsTotalMSPR"
+                    style="@style/detailInsightsTableStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder" />
+
+                <TextView
+                    android:id="@+id/detailInsightsTotalChange"
+                    style="@style/detailInsightsTableStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="1dp">
+
+                <TextView
+                    android:id="@+id/detailInsightsPositive"
+                    style="@style/detailInsightsTableHeaderStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/detail_insights_positive" />
+
+                <TextView
+                    android:id="@+id/detailInsightsPositiveMSPR"
+                    style="@style/detailInsightsTableStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder" />
+
+                <TextView
+                    android:id="@+id/detailInsightsPositiveChange"
+                    style="@style/detailInsightsTableStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder"
+                    tools:ignore="TextContrastCheck" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="1dp">
+
+                <TextView
+                    android:id="@+id/detailInsightsNegative"
+                    style="@style/detailInsightsTableHeaderStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/detail_insights_negative" />
+
+                <TextView
+                    android:id="@+id/detailInsightsNegativeMSPR"
+                    style="@style/detailInsightsTableStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder" />
+
+                <TextView
+                    android:id="@+id/detailInsightsNegativeChange"
+                    style="@style/detailInsightsTableStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/detailInsightsRecommendationChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <WebView
+        android:id="@+id/detailInsightsEPSChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+</merge>

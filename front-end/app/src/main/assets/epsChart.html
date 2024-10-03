@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stock Chart</title>
+		<script src="https://code.highcharts.com/stock/highstock.js"></script>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script>
+			document.addEventListener("DOMContentLoaded", async function () {
+				const params = new URLSearchParams(window.location.search);
+				const ticker = params.get("ticker");
+
+				let earings = await fetch(
+					`https://assignment3-service-lrby6jnbia-uw.a.run.app/api/earnings/${ticker}`
+				).then((response) => response.json());
+
+				let period = earings.map((earn) => `${earn.period}<br/>Surprise: ${earn.surprise}`);
+                let actual = earings.map((earn) => earn.actual);
+                let estimate = earings.map((earn) => earn.estimate);
+
+				var charts = Highcharts.chart("container", {
+					chart: {
+						backgroundColor: "#f7f7f7",
+					},
+					title: {
+						text: "Historical EPS Surprises",
+					},
+					xAxis: [
+						{
+							categories: period,
+							maxPadding: 0.05,
+							showLastLabel: true,
+						},
+						{},
+					],
+					yAxis: {
+						title: {
+							text: "Quarterly EPS",
+						},
+					},
+					series: [
+						{
+							name: "Actual",
+							type: "spline",
+							data: actual,
+						},
+						{
+							name: "Estimate",
+							type: "spline",
+							data: estimate,
+						},
+					],
+				});
+
+				console.log(earings);
+			});
+		</script>
+	</body>
+</html>

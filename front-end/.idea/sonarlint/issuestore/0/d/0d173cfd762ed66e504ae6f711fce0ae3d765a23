@@ -1,0 +1,27 @@
+
+‡	java:S112²"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$7a76d290-ffdd-4643-b778-e669b14d1ae1
+‡	java:S112Î"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$a7648a47-259c-4538-93eb-ece5f9472604
+‡	java:S112ã"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$8f182938-847b-4ef3-8e13-5c75e9b6b931
+‡	java:S112™"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$c3ba37ef-a63f-408c-b977-05da9cfcbaf4
+j
+java:S1192“"GDefine a constant instead of duplicating this literal "ticker" 3 times.(¸·¯ñùÿÿÿÿ8§¼•ñ1
+p
+java:S1192­"MDefine a constant instead of duplicating this literal "MainActivity" 3 times.(±ñ°»ûÿÿÿÿ8§¼•ñ1
+v
+java:S3516š"9Refactor this method to not always return the same value.(µ‘‚éJ$adc1686a-9a3a-4aac-b0a8-0af3f1746a54
+b
+java:S1170A"!Make this final field static too.(Ô«Ê®þÿÿÿÿJ$9e73365a-19b5-499c-aee8-f27ae2a0c1f2
+„
+java:S1659>"HDeclare "cashBalance" and all following declarations on a separate line.(¾‘®ÂJ$b77512e5-ab29-4fa7-a9ff-577920a6543b
+n
+java:S1659È",Declare "favoritesArray" on a separate line.(åèÓ€þÿÿÿÿJ$fa08b02d-f4e4-41d7-b72f-60f9ac6ccfe5
+›
+java:S2142â"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(„‰€çJ$e152b236-c84e-48a3-8f95-67af13eba862
+´
+java:S1130è"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(æÛ×½J$cd0e8140-a61a-4633-be69-dcd3b98d6946
+›
+java:S2142˜"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€J$a7ace0b6-8872-4a56-a2ee-0403a994ad34
+¾
+java:S1186È"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿ç¨žJ$6882887d-5a45-4d87-ab95-bf7a01b9b4de
+x	java:S125ë"<This block of commented-out lines of code should be removed.(ÊÍöJ$a7c2da98-e3f9-42dd-867b-308b1f12eddc
+x	java:S125î"<This block of commented-out lines of code should be removed.(³é„ïJ$9821d97d-3fc8-431b-8d27-eb884d04bf63

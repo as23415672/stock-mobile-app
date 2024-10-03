@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="CustomProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressTint">#FF4081</item> <!-- Your desired color -->
+        <item name="android:progressBackgroundTint">#CCCCCC
+        </item> <!-- Background color if needed -->
+    </style>
+
+    <style name="textTitleStyle">
+        <item name="android:background">#CDCDCD</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textSummaryStyle">
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">33dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="entryFirstLineStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingStart">20dp</item>
+    </style>
+
+    <style name="entrySecondLineStyle">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingStart">20dp</item>
+    </style>
+
+    <style name="detailFirstLineStyle" parent="entryFirstLineStyle">
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="detailSecondLineStyle" parent="entrySecondLineStyle">
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="detailSectionTitleStyle">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="detailSectionContentStyle">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="detailSectionContentTitleStyle" parent="detailSectionContentStyle">
+        <item name="android:paddingStart">20dp</item>
+    </style>
+
+    <style name="detailInsightsTableStyle">
+        <item name="android:layout_marginStart">1dp</item>
+        <item name="android:layout_marginEnd">1dp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@color/light_grey</item>
+    </style>
+
+    <style name="detailInsightsTableHeaderStyle" parent="detailInsightsTableStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/activity_details">
+
+    <TextView
+        android:id="@+id/detailNewsTitle"
+        style="@style/detailSectionTitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_news_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detailNewsView"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</merge>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/dialog_normal">
+
+
+    <TextView
+        android:id="@+id/dialogNewsSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="@string/placeholder" />
+
+    <TextView
+        android:id="@+id/dialogNewsDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginVertical="5dp"
+        android:text="@string/placeholder" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="15dp"
+        android:background="@color/grey" />
+
+    <TextView
+        android:id="@+id/dialogNewsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="@string/placeholder" />
+
+    <TextView
+        android:id="@+id/dialogNewsSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginVertical="10dp"
+        android:text="@string/placeholder" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/chromeButton"
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/open_in_explorer"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/chrome" />
+
+        <ImageButton
+            android:id="@+id/twitterButton"
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/share_on_twitter"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/twitter_x_icon" />
+
+        <ImageButton
+            android:id="@+id/facebookButton"
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/facebook"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/share_on_facebook" />
+
+    </LinearLayout>
+</LinearLayout>

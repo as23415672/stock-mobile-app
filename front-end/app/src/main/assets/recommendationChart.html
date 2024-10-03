@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stock Chart</title>
+		<script src="https://code.highcharts.com/stock/highstock.js"></script>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script>
+			document.addEventListener("DOMContentLoaded", async function () {
+				const params = new URLSearchParams(window.location.search);
+				const ticker = params.get("ticker");
+
+				let recommendation = await fetch(
+					`https://assignment3-service-lrby6jnbia-uw.a.run.app/api/recommendation/${ticker}`
+				).then((response) => response.json());
+
+                let period = recommendation.map((recommend) => recommend.period);
+				let strongBuy = recommendation.map((recommend) => recommend.strongBuy);
+				let buy = recommendation.map((recommend) => recommend.buy);
+				let hold = recommendation.map((recommend) => recommend.hold);
+				let sell = recommendation.map((recommend) => recommend.sell);
+				let strongSell = recommendation.map(
+					(recommend) => recommend.strongSell
+				);
+                console.log(recommendation)
+				var stockChart = Highcharts.chart("container", {
+					chart: {
+						backgroundColor: "#f7f7f7",
+					},
+					title: {
+						text: "Recommendation Trends",
+					},
+					xAxis: {
+						categories: period,
+					},
+					yAxis: {
+						min: 0,
+                        title: {
+                            text: "#Analysis"
+                        },
+						stackLabels: {
+							enabled: true,
+						},
+					},
+					tooltip: {
+						headerFormat: "<b>{point.x}</b><br/>",
+						pointFormat:
+							"{series.name}: {point.y}<br/>Total: {point.stackTotal}",
+					},
+					plotOptions: {
+						column: {
+							stacking: "normal",
+							dataLabels: {
+								enabled: true,
+							},
+						},
+					},
+					series: [
+						{
+							type: "column",
+							name: "Strong Buy",
+							color: "#40bf00",
+							data: strongBuy,
+						},
+						{
+							type: "column",
+							name: "Buy",
+							color: "#00ff00",
+							data: buy,
+						},
+						{
+							type: "column",
+							name: "Hold",
+							color: "#808000",
+							data: hold,
+						},
+						{
+							type: "column",
+							name: "Sell",
+							color: "#ff0000",
+							data: sell,
+						},
+						{
+							type: "column",
+							name: "Strong Sell",
+							color: "#bf4000",
+							data: strongSell,
+						},
+					],
+				});
+			});
+		</script>
+	</body>
+</html>

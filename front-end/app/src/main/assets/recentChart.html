@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stock Chart</title>
+		<script src="https://code.highcharts.com/stock/highstock.js"></script>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script>
+			document.addEventListener("DOMContentLoaded", async function () {
+				const params = new URLSearchParams(window.location.search);
+				const ticker = params.get("ticker");
+				const from = params.get("from");
+				const to = params.get("to");
+				const change = params.get("change");
+
+				var data = (
+					await fetch(
+						`https://assignment3-service-lrby6jnbia-uw.a.run.app/api/history/${ticker}/1/hour/${from}/${to}`
+					).then((response) => response.json())
+				).results.map((result) => [result.t, result.c]);
+
+				var stockChart = Highcharts.chart("container", {
+					chart: {
+						backgroundColor: "#f7f7f7",
+					},
+
+					title: {
+						text: `${ticker} Hourly Price Variation`,
+					},
+
+					legend: {
+						enabled: false,
+					},
+
+					xAxis: {
+						type: "datetime",
+					},
+
+					yAxis: {
+						title: { text: null },
+						opposite: true,
+					},
+
+					plotOptions: {
+						series: {
+							marker: {
+								enabled: false,
+							},
+						},
+					},
+
+					series: [
+						{
+							name: `${ticker} Stock Price`,
+							data: data,
+							type: "line",
+							tooltip: {
+								valueDecimals: 2,
+							},
+							color: change > 0.0005 ? "#00B000" : change < 0.0005 ? "#B00000" : "#000000",
+						},
+					],
+				});
+			});
+		</script>
+	</body>
+</html>

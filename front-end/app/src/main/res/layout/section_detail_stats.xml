@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/activity_details">
+
+    <TextView
+        android:id="@+id/statsSectionTitle"
+        style="@style/detailSectionTitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_stats_title" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/detailStatsOpenTitle"
+                style="@style/detailSectionContentTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detail_stats_open" />
+
+            <TextView
+                android:id="@+id/detailStatsOpen"
+                style="@style/detailSectionContentStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/placeholder" />
+
+            <TextView
+                android:id="@+id/detailStatsHighTitle"
+                style="@style/detailSectionContentTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detail_stats_high" />
+
+            <TextView
+                android:id="@+id/detailStatsHigh"
+                style="@style/detailSectionContentStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/placeholder" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/detailStatsLowTitle"
+                style="@style/detailSectionContentTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detail_stats_low" />
+
+            <TextView
+                android:id="@+id/detailStatsLow"
+                style="@style/detailSectionContentStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/placeholder" />
+
+            <TextView
+                android:id="@+id/detailStatsPrevTitle"
+                style="@style/detailSectionContentTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detail_stats_prev" />
+
+            <TextView
+                android:id="@+id/detailStatsPrev"
+                style="@style/detailSectionContentStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/placeholder" />
+        </TableRow>
+
+    </TableLayout>
+</merge>
